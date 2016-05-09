@@ -1,1 +1,2 @@
-# AngularJS
+# Angular
+Vi lär oss AngularJS
