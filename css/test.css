@@ -1,0 +1,50 @@
+.navbar-default {
+  background-color: #000000;
+  border-color: #413d95;
+}
+
+.table{
+  margin: 1px;
+}
+.row{
+  border-color: #000000;
+  border-style: solid;
+  border-width: 1px;
+  
+}
+.col-sm-8{
+  border-color: #000000;
+  border-style: solid;
+  border-width: 1px;
+  
+}
+.col-sm-2{
+  border-color: #000000;
+  border-style: solid;
+  border-width: 1px;
+  
+}.col-sm-4{
+  border-color: #000000;
+  border-style: solid;
+  border-width: 1px;
+  
+}.col-sm-6{
+  border-color: #000000;
+  border-style: solid;
+  border-width: 1px;
+  
+}
+ div.col-sm-4{
+     height:250px;
+     background-color=#cccaaa;
+     background-image: url(images/back1.jpg));
+     background-size: cover;
+     background-repeat: no-repeat;
+}
+
+ div.colorBack{
+     height:500px;
+     background-color=#FFFFFF;
+     background-image: url(images/back1.jpg));
+     background-size: cover;
+}
