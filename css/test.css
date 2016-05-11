@@ -16,6 +16,8 @@
   border-color: #000000;
   border-style: solid;
   border-width: 1px;
+  /*border-left-width: 0px;*/
+  /*border-right-width: 0px;*/
   
 }
 .col-sm-2{
@@ -23,28 +25,28 @@
   border-style: solid;
   border-width: 1px;
   
-}.col-sm-4{
+}
+.col-sm-4{
   border-color: #000000;
   border-style: solid;
   border-width: 1px;
+  /*border-bottom-width: 0px;*/
+  background-image: url("../images/back1.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+
+}
+
   
 }.col-sm-6{
   border-color: #000000;
   border-style: solid;
   border-width: 1px;
+/*  border-left-width: 1px;*/
+  /*border-right-width: 0px;*/
   
 }
  div.col-sm-4{
      height:250px;
-     background-color=#cccaaa;
-     background-image: url(images/back1.jpg));
-     background-size: cover;
-     background-repeat: no-repeat;
-}
-
- div.colorBack{
-     height:500px;
-     background-color=#FFFFFF;
-     background-image: url(images/back1.jpg));
-     background-size: cover;
+    /**background-color: lightblue;**/
 }

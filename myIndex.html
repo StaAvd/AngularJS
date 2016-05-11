@@ -3,39 +3,28 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
     <meta name="description" content="">
     <meta name="author" content="">
-    <link rel="icon" href="../../favicon.ico">
 
-    <title>Jumbotron Template for Bootstrap</title>
-    <!-- Bootstrap core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
-
-
-    <link href="css/ie10-viewport-bug-workaround.css" rel="stylesheet">
-
-
-    <link href="css/jumbotron.css" rel="stylesheet">
     <link href="css/test.css" rel="stylesheet">
-    <script src="js/ie-emulation-modes-warning.js"></script>
-
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    
+ 
 
   </head>
 
-  <body ng-app="">
+  <body ng-app="myApp" ng-controller="namesCtrl">
 
     <nav class="navbar navbar-default navbar-fixed-top">
       <div class="container">
       <div>
-        <button type="button" class="btn btn-default" aria-label="Left Align">
-            <span class="glyphicon glyphicon-align-left" aria-hidden="true"></span>
+        <button type="button" class="btn btn-default btn-sm" aria-label="Left Align">
+          <span class="glyphicon glyphicon-education" aria-hidden="true"></span>
+             My Education
         </button>
-
         <button type="button" class="btn btn-default btn-lg">
-            <span class="glyphicon glyphicon-education" aria-hidden="true"></span> My Education
+            <span class="glyphicon glyphicon-star" aria-hidden="true"></span> My Education
         </button>
       </div>
         <div class="navbar-header">
@@ -45,18 +34,17 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#">Project name</a>
+          <a class="navbar-brand" href="#">Stanislav</a>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
           <form class="navbar-form navbar-right">
 
             <div class="form-group">
               <input type="email" placeholder="Email" class="form-control" ng-model="myEmail">
-              <p style="color:#FFFFFF"> {{myEmail}}</p>
             </div>
 
             <div class="form-group">
-              <input type="text" class="form-control" ng-model="myEmail" value="{{myEmail}}">
+              <input type="text" class="form-control" ng-model="myEmail">
             </div>
 
             <button type="submit" class="btn btn-success">Sign in</button>
@@ -65,44 +53,35 @@
       </div>
     </nav>
 
-    <!-- Main jumbotron for a primary marketing message or call to action -->
+
       <div class="clearfix" style="height:100px">sgrsfghsdhjgfhj</div>
     <div class="jumbotron">
       <div class="container">
           <div class="row">
               <div class="col-sm-8">.col-sm-8 </div>
-              <div class="col-sm-4 colorBack">col-sm-4</div>
+              <!--<div class="col-sm-4"> <img src="images\back1.jpg" style="width:100%;height:100%"></img>.col-sm-4</div>-->
+              <div class="col-sm-4">.col-sm-4</div>
           </div>
             <div class="row"> 
                 <div class="col-sm-6">
                     <table class="table table-bordered table-striped">
                         <thead>
                             <tr>
-                                <th>Имя</th>
-                                <th>Фамилия</th>
-                                <th>Почта</th>
+                                <th ng-click="orderByMe('fname')">Имя</th>
+                                <th ng-click="orderByMe('ename')">Фамилия</th>
+                                <th ng-click="orderByMe('email')">Почта</th>
                             </tr>
                         </thead>
                         <tbody>
-                            <tr>
-                                <td>Иван</td>
-                                <td>Николайчук</td>
-                                <td>ivan@example.com</td>
-                            </tr>
-                            <tr>
-                                <td>Мария</td>
-                                <td>Иванова</td>
-                                <td>mary@example.com</td>
-                            </tr>
-                            <tr>
-                                <td>Юлия</td>
-                                <td>Петренко</td>
-                                <td>julia@example.com</td>
+                            <tr ng-repeat="x in names | orderBy:myOrderBy">
+                              <td>{{x.fname}}</td>
+                              <td>{{x.ename}}</td>
+                              <td>{{x.email}}</td>
                             </tr>
                         </tbody>
                     </table>
                 </div> 
-                <div class="col-sm-6">.col-sm-6aaaaaaaaaaaaaa aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa aaaaaaaaaaaaaaaa aaaaaaaaaaaaaaaaaaaaaaaaa aaaaaaaaaaaaaaaaaaaaaaaa</div> 
+                <div class="col-sm-6">.col-sm-6This is a template for a simple marketing or informational website. It includes a large callout called a jumbotron and three supporting pieces of content. Use it as a starting point to create something more unique.</div> 
             </div> 
           <div class="row">
               <div class="col-sm-12">.col-sm-12</div>
@@ -138,7 +117,7 @@
       <hr>
 
       <footer>
-        <p>&copy; 2015 Company, Inc.</p>
+        <p>&copy; 2016 Stanislav Avdonin, Inc.</p>
       </footer>
     </div> <!-- /container -->
 
@@ -151,5 +130,11 @@
     <script src="js/bootstrap.min.js"></script>
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
+    <script src="js/ie-emulation-modes-warning.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.min.js"></script>
+    <script src="app.js"></script>
+
+
   </body>
+
 </html>
