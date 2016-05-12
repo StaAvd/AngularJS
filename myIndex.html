@@ -73,15 +73,20 @@
                             </tr>
                         </thead>
                         <tbody>
-                            <tr ng-repeat="x in names | orderBy:myOrderBy">
+                            <tr ng-repeat="x in names | orderBy:myOrderBy track by $index">
                               <td>{{x.fname}}</td>
                               <td>{{x.ename}}</td>
-                              <td>{{x.email}}</td>
+                              <td>{{x.mail}}</td>
                             </tr>
                         </tbody>
                     </table>
                 </div> 
-                <div class="col-sm-6">.col-sm-6This is a template for a simple marketing or informational website. It includes a large callout called a jumbotron and three supporting pieces of content. Use it as a starting point to create something more unique.</div> 
+                <div class="col-sm-6">
+                  <input type="text" class="form-control"  ng-model="fname"><br>
+                  <input type="text" class="form-control"  ng-model="ename"><br>
+                  <input type="text" class="form-control" ng-model="mymail"><br>
+                  <button ng-click="addItem()">Add</button><br>
+                  .col-sm-6This is a template for a simple marketing or informational website. It includes a large callout called a jumbotron and three supporting pieces of content. Use it as a starting point to create something more unique.</div> 
             </div> 
           <div class="row">
               <div class="col-sm-12">.col-sm-12</div>
@@ -115,6 +120,7 @@
       </div>
 
       <hr>
+      <!--<script type="text/javascript">console.log ($scope.fname,' ',$scope.ename,' ',$scope.email) </script>**/-->
 
       <footer>
         <p>&copy; 2016 Stanislav Avdonin, Inc.</p>
@@ -127,10 +133,10 @@
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
-    <script src="js/bootstrap.min.js"></script>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-    <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
-    <script src="js/ie-emulation-modes-warning.js"></script>
+    
+    
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.min.js"></script>
     <script src="app.js"></script>
 
